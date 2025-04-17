@@ -1,0 +1,25 @@
+---
+const { headline = "[Stadt]", link } = Astro.props;
+---
+
+<div class="card">
+    <h1>{headline}</h1>
+    <p>
+        <slot />
+    </p>
+    <a href="{ link }">weiter</a>
+    <slot name="footer"/>
+</div>
+
+<style>
+    .card {
+        background-color: #ddd;
+        padding: 0.5rem;
+        border-radius: 3px;
+    }
+    h1 {
+        font-size: 1rem;
+        border-bottom: 1px solid red;
+        padding-bottom: 3px;
+    }
+</style>
