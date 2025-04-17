@@ -1,0 +1,19 @@
+@use 'sass:color';
+
+$brand-color: #DE4400;
+
+html,
+body {
+  margin: 0 auto;
+  width: min(1024px, 90%);
+  height: 100%;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  > :first-child {
+    background-color: color.scale($brand-color, $lightness: 80%);
+  }
+}
