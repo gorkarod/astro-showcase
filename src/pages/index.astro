@@ -4,17 +4,18 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<h1>Das ist eine h1</h1>
-	<div class="cards">
-		<Card headline="Hamburg" link="http://hamburg.de">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
-		</Card>
-		<Card headline="Heidelberg" link="http://hamburg.de">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
-		</Card>
-		<Card link="http://hamburg.de">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
-			<div slot="footer"><img src="favicon.svg"></div>
-		</Card>
-	</div>
+	<h1 slot="header">Schöne Städte</h1>
+	<main>
+		<div class="cards">
+			<Card headline="Hamburg" link="http://hamburg.de">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
+			</Card>
+			<Card headline="Heidelberg" link="http://hamburg.de">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
+			</Card>
+			<Card headline="Darmstadt" link="http://hamburg.de">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
+			</Card>
+		</div>
+	</main>
 </Layout>

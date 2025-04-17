@@ -1,0 +1,1 @@
+Darmstadt ist eine kreisfreie Großstadt mit 168.457 Einwohnern im Süden Hessens, Verwaltungssitz des Regierungsbezirks Darmstadt und des Landkreises Darmstadt-Dieburg. Die Stadt gehört zum Rhein-Main-Gebiet und ist **eines der zehn Oberzentren des Landes Hessen**.

@@ -1,0 +1,1 @@
+Heidelberg ist eine Stadt am Neckar im Südwesten Deutschlands. Sie ist **bekannt für die altehrwürdige Universität**, die im 14. Jahrhundert gegründet wurde. Die gotische Heiliggeistkirche überragt den von Cafés gesäumten Marktplatz inmitten der Altstadt.

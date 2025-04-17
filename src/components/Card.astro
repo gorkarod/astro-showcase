@@ -3,7 +3,7 @@ const { headline = "[Stadt]", link } = Astro.props;
 ---
 
 <div class="card">
-    <h1>{headline}</h1>
+    <h2>{headline}</h2>
     <p>
         <slot />
     </p>
@@ -13,13 +13,17 @@ const { headline = "[Stadt]", link } = Astro.props;
 
 <style>
     .card {
-        background-color: #ddd;
-        padding: 0.5rem;
-        border-radius: 3px;
+        background-color: var(--color-light-gray);
+        padding: 0 var(--spacing-1) var(--spacing-2);
+        border-radius: var(--standard-border-radius);
     }
-    h1 {
-        font-size: 1rem;
-        border-bottom: 1px solid red;
-        padding-bottom: 3px;
+
+    h2 {
+        font-size: var(--scale-2);
+        margin: var(--spacing-2) 0 var(--spacing-2);
+    }
+
+    img {
+        margin-bottom:  var(--spacing-1);
     }
 </style>

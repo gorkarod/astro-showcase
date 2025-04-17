@@ -1,0 +1,1 @@
+Hamburg ist eine **bedeutende norddeutsche Hafenstadt**, die über die Elbe mit der Nordsee verbunden ist. Die Stadt wird von **Hunderten von Kanälen** durchzogen, die zum Teil als Fleete bezeichnet werden, und weist außerdem ausgedehnte Park- und Grünflächen auf.

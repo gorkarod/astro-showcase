@@ -12,6 +12,9 @@ import '../styles/styles.scss';
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<header>
+			<slot name="header"></slot>
+		</header>
 		<slot />
 	</body>
 </html>
