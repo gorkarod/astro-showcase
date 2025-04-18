@@ -1,20 +1,28 @@
 ---
 import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
+
+import HamburgText from '../content/teaser/hamburg.md'
+import HeidelbergText from '../content/teaser/heidelberg.md'
+import DarmstadtText from '../content/teaser/darmstadt.md'
+
+import hamburgImage from '../content/images/hamburg.jpg'
+import heidelbergImage from '../content/images/heidelberg.jpg'
+import darmstadtImage from '../content/images/darmstadt.jpg'
 ---
 
 <Layout>
 	<h1 slot="header">Schöne Städte</h1>
 	<main>
 		<div class="cards">
-			<Card headline="Hamburg" link="http://hamburg.de">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
+			<Card headline="Hamburg"  image={ hamburgImage }>
+				<HamburgText/>
 			</Card>
-			<Card headline="Heidelberg" link="http://hamburg.de">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
+			<Card headline="Heidelberg" link="http://heidelberg.de" image={ heidelbergImage }>
+				<HeidelbergText/>
 			</Card>
-			<Card headline="Darmstadt" link="http://hamburg.de">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum dicta dolor ea eos eveniet fuga harum in itaque laudantium odit possimus quasi repellat rerum, sit totam, ullam. Architecto, sapiente?
+			<Card headline="Darmstadt" link="http://darmstadt.de" image={ darmstadtImage }>
+				<DarmstadtText/>
 			</Card>
 		</div>
 	</main>

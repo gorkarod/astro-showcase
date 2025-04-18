@@ -1,14 +1,15 @@
 ---
-const { headline = "[Stadt]", link } = Astro.props;
+import { Image } from 'astro:assets';
+const { headline = "[Stadt]", link, image } = Astro.props;
 ---
 
 <div class="card">
     <h2>{headline}</h2>
-    <p>
+    {image && <Image src={ image } alt={ headline } fit="cover" width="414" height="276"/>}
+    <div>
         <slot />
-    </p>
-    <a href="{ link }">weiter</a>
-    <slot name="footer"/>
+    </div>
+    <a href={ link }>weiter</a>
 </div>
 
 <style>
