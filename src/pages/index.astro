@@ -1,4 +1,7 @@
 ---
+import { getCollection } from 'astro:content';
+const articles = await getCollection('articles');
+
 import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -9,21 +12,36 @@ import DarmstadtText from '../content/teaser/darmstadt.md'
 import hamburgImage from '../content/images/hamburg.jpg'
 import heidelbergImage from '../content/images/heidelberg.jpg'
 import darmstadtImage from '../content/images/darmstadt.jpg'
+
 ---
 
 <Layout>
 	<h1 slot="header">Schöne Städte</h1>
 	<main>
-		<div class="cards">
-			<Card headline="Hamburg"  image={ hamburgImage }>
-				<HamburgText/>
-			</Card>
-			<Card headline="Heidelberg" link="http://heidelberg.de" image={ heidelbergImage }>
-				<HeidelbergText/>
-			</Card>
-			<Card headline="Darmstadt" link="http://darmstadt.de" image={ darmstadtImage }>
-				<DarmstadtText/>
-			</Card>
-		</div>
+		<section>
+			<div class="cards">
+				<Card headline="Hamburg" image={hamburgImage}>
+					<HamburgText/>
+				</Card>
+				<Card headline="Heidelberg" link="http://heidelberg.de" image={heidelbergImage}>
+					<HeidelbergText/>
+				</Card>
+				<Card headline="Darmstadt" link="http://darmstadt.de" image={darmstadtImage}>
+					<DarmstadtText/>
+				</Card>
+			</div>
+		</section>
+		<section>
+			<h2>Weitere Informationen</h2>
+			<ul>
+				{articles.map(article => (
+					<li>
+						{article.data.label && <span class="label">{article.data.label}</span>}
+						<a href={`articles/${article.id}`}>{article.data.title}</a>
+					</li>
+				))}
+			</ul>
+		</section>
+
 	</main>
 </Layout>
