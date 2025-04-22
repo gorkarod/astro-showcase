@@ -1,5 +1,5 @@
 ---
-title: "48 Stunden in Berlin, 48 Party ohne Ende"
+title: "48 Stunden in Berlin, 48 Stunden Party ohne Ende"
 ---
 
 Eine Unterkunft wirst du nicht brauchen, wenn du nur Party machen willst. Berlin ist bekannt für sein aufregendes Nachtleben. Hier sind einige Tipps, um das Beste aus deiner Partynacht herauszuholen:
