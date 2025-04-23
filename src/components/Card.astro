@@ -7,7 +7,7 @@ const { headline = "[Stadt]", link, image } = Astro.props;
     <h2>{headline}</h2>
     {image && <Image src={ image } alt={ headline } fit="cover" width="414" height="276"/>}
     <div>
-        <slot />
+        <slot/>
     </div>
     <a href={ link }>weiter</a>
 </div>
@@ -22,6 +22,7 @@ const { headline = "[Stadt]", link, image } = Astro.props;
     h2 {
         font-size: var(--scale-2);
         margin: var(--spacing-2) 0 var(--spacing-2);
+        border-bottom: 0;
     }
 
     img {

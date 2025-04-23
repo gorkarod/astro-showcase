@@ -364,19 +364,19 @@ figure > table {
 
 td,
 th {
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-gray);
   text-align: start;
   padding: 0.5rem;
 }
 
 th {
-  background-color: var(--accent-bg);
+  background-color: #FFF;
   font-weight: bold;
 }
 
 tr:nth-child(even) {
   /* Set every other cell slightly darker. Improves readability. */
-  background-color: var(--accent-bg);
+  background-color: var(--color-light-gray);
 }
 
 table caption {

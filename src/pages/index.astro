@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 const articles = await getCollection('articles');
 
 import Card from '../components/Card.astro';
+import PopulationChart from '../components/PopulationChart.vue';
 import Layout from '../layouts/Layout.astro';
 
 import HamburgText from '../content/teaser/hamburg.md'
@@ -13,6 +14,7 @@ import hamburgImage from '../content/images/hamburg.jpg'
 import heidelbergImage from '../content/images/heidelberg.jpg'
 import darmstadtImage from '../content/images/darmstadt.jpg'
 
+import population from '../content/population.json'
 ---
 
 <Layout>
@@ -42,6 +44,6 @@ import darmstadtImage from '../content/images/darmstadt.jpg'
 				))}
 			</ul>
 		</section>
-
+		<PopulationChart client:load population={population}/>
 	</main>
 </Layout>
