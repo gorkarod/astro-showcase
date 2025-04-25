@@ -12,16 +12,8 @@ $color-gray: hsl(208 19% 74%);
 $color-light-gray: hsl(197 24% 94%);
 $color-text: hsl(30, 6%, 21%);
 
-$spacing-clamps: utopia.calculateClamps(("minWidth": 320,
-        "maxWidth": 1024,
-        "pairs": (
-                        (4, 8),
-                        (8, 16),
-                        (16, 32),
-                        (24, 48),
-                        (32, 64)
-        ))
-);
+$utopia-min: 320;
+$utopia-max: 1024;
 
 :root {
   --sans-font: "Merriweather", -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
@@ -49,9 +41,29 @@ $spacing-clamps: utopia.calculateClamps(("minWidth": 320,
   --marked: #ffdd33;
   --disabled: #efefef;
 
+  // Utopia --spacing-x
+
+  $spacing-clamps: utopia.calculateClamps(("minWidth": $utopia-min,
+          "maxWidth": $utopia-max,
+          "pairs": (
+                          (4, 8),
+                          (8, 16),
+                          (16, 32),
+                          (24, 48),
+                          (32, 64)
+          ))
+  );
+
+  @for $i from 1 through list.length($spacing-clamps) {
+    $clamp: list.nth($spacing-clamps, $i);
+    --spacing-#{$i}: #{map.get($clamp, "clamp")};
+  }
+
+  // Utopia --scale-X für Schriftgrößen
+
   @include utopia.generateTypeScale((
-          "minWidth": 320,
-          "maxWidth": 1024,
+          "minWidth": $utopia-min,
+          "maxWidth": $utopia-max,
           "minFontSize": 10,
           "maxFontSize": 13,
           "minTypeScale": 1.2,
@@ -60,12 +72,6 @@ $spacing-clamps: utopia.calculateClamps(("minWidth": 320,
           "negativeSteps": 2,
           "prefix": "scale-"
   ));
-
-  @for $i from 1 through list.length($spacing-clamps) {
-    $clamp: list.nth($spacing-clamps, $i);
-    --spacing-#{$i}: #{map.get($clamp, "clamp")};
-  }
-
 }
 
 *,

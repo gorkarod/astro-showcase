@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
-const articles = await getCollection('articles');
+import {getCollection} from 'astro:content'
+const articles = await getCollection('articles')
 
-import Card from '../components/Card.astro';
-import PopulationChart from '../components/PopulationChart.vue';
-import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro'
+import PopulationChart from '../components/PopulationChart.vue'
+import Layout from '../layouts/Layout.astro'
 
 import HamburgText from '../content/teaser/hamburg.md'
 import HeidelbergText from '../content/teaser/heidelberg.md'
@@ -18,32 +18,32 @@ import population from '../content/population.json'
 ---
 
 <Layout>
-	<h1 slot="header">Schöne Städte</h1>
-	<main>
-		<section>
-			<div class="cards">
-				<Card headline="Hamburg" image={hamburgImage}>
-					<HamburgText/>
-				</Card>
-				<Card headline="Heidelberg" link="http://heidelberg.de" image={heidelbergImage}>
-					<HeidelbergText/>
-				</Card>
-				<Card headline="Darmstadt" link="http://darmstadt.de" image={darmstadtImage}>
-					<DarmstadtText/>
-				</Card>
-			</div>
-		</section>
-		<section>
-			<h2>Weitere Informationen</h2>
-			<ul>
-				{articles.map(article => (
-					<li>
-						{article.data.label && <span class="label">{article.data.label}</span>}
-						<a href={`articles/${article.id}`}>{article.data.title}</a>
-					</li>
-				))}
-			</ul>
-		</section>
-		<PopulationChart client:load population={population}/>
-	</main>
+    <h1 slot="header">Schöne Städte</h1>
+    <main>
+        <section>
+            <div class="cards">
+                <Card headline="Hamburg" link="https://hamburg.de" image={hamburgImage}>
+                    <HamburgText/>
+                </Card>
+                <Card headline="Heidelberg" link="http://heidelberg.de" image={heidelbergImage}>
+                    <HeidelbergText/>
+                </Card>
+                <Card headline="Darmstadt" link="http://darmstadt.de" image={darmstadtImage}>
+                    <DarmstadtText/>
+                </Card>
+            </div>
+        </section>
+        <section>
+            <h2>Weitere Informationen</h2>
+            <ul>
+                {articles.map(article => (
+                        <li>
+                            {article.data.label && <span class="label">{article.data.label}</span>}
+                            <a href={`articles/${article.id}`}>{article.data.title}</a>
+                        </li>
+                ))}
+            </ul>
+        </section>
+        <PopulationChart client:load population={population}/>
+    </main>
 </Layout>

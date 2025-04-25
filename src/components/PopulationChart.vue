@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, ref} from 'vue';
+import {computed, ref} from 'vue'
 
 type CityPopulationData = {
   [year: string]: number
@@ -52,16 +52,18 @@ const min = computed(() => {
       <option value="Heidelberg">Heidelberg</option>
       <option value="Darmstadt">Darmstadt</option>
     </select>
-    
+
     <select v-model="chartType" style="margin-left: 4px">
       <option value="rel">relativ</option>
       <option value="abs">absolut</option>
     </select>
-      
+
     <table>
       <tr v-for="(population, year) in data">
         <td>{{ year }}</td>
-        <td><div :style="{width: 1 + ((population - min) / (max - min)) * (100 - 1)+ '%'}">&nbsp;</div></td>
+        <td>
+          <div :style="{width: 1 + ((population - min) / (max - min)) * (100 - 1)+ '%'}">&nbsp;</div>
+        </td>
         <td>{{ population.toLocaleString('de-DE') }}</td>
       </tr>
     </table>
@@ -79,10 +81,12 @@ td {
     width: 1%;
     text-align: center;
   }
+
   &:last-child {
     text-align: right;
     width: 90px;
   }
+
   &:not(:first-child, :last-child) div {
     background-color: green;
     height: 100%;
