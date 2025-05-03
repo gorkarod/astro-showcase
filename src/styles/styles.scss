@@ -16,11 +16,29 @@ $utopia-min: 320;
 $utopia-max: 1024;
 
 :root {
-  --sans-font: "Merriweather", -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+  --sans-font: Inter, -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
   "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
   "Helvetica Neue", sans-serif;
-  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --mono-font: CommitMono, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   --standard-border-radius: 5px;
+
+  --color-aqua: #7fdbff;
+  --color-blue: #0074d9;
+  --color-navy: #001f3f;
+  --color-teal: #39cccc;
+  --color-green: hsl(120, 100%, 25%);
+  --color-olive: #3d9970;
+  --color-lime: #01ff70;
+  --color-yellow: #ffdc00;
+  --color-orange: #ff851b;
+  --color-red: #ff4136;
+  --color-fuchsia: #f012be;
+  --color-purple: #b10dc9;
+  --color-maroon: #85144b;
+  --color-white: #fff;
+  --color-silver: #ddd;
+  --color-black: #111;
+
 
   --color-brand: #{$color-brand};
   --color-fond: #{$color-fond};
@@ -28,11 +46,12 @@ $utopia-max: 1024;
   --color-light-gray: #{$color-light-gray};
   --color-text: #{$color-text};
 
+
   --bg: #fff;
   --accent-bg: #{$color-gray};
   --text: #{$color-text};
   --text-light: #{color.scale($color-text, $lightness: 50%)};
-  --border: #{color.scale($color-text, $lightness: 10%)};
+  --border: #{color.scale($color-text, $lightness: 40%)};
   --accent: #{$color-brand};
   --accent-hover: #{color.scale($color-brand, $lightness: 30%)};;
   --accent-text: var(--bg);
@@ -112,8 +131,9 @@ body > header {
   border-top: var(--spacing-1) solid var(--color-brand);
   background-color: var(--color-light-gray);
   border-radius: 0 0 var(--standard-border-radius) var(--standard-border-radius);
-  margin-bottom:  var(--spacing-4);
+  margin-bottom: var(--spacing-4);
   padding: var(--spacing-1);
+
   h1 {
     margin: var(--spacing-1) 0;
   }
@@ -178,7 +198,6 @@ h1,
 h2,
 h3 {
   line-height: 1.1;
-  font-family: Lora, serif;
 }
 
 h2, h3 {
@@ -531,7 +550,6 @@ img,
 video {
   max-width: 100%;
   height: auto;
-  border-radius: var(--standard-border-radius);
 }
 
 figure {
@@ -579,7 +597,7 @@ pre,
 pre span,
 kbd,
 samp {
-  font-family: var(--mono-font);
+  font-family: var(--mono-font), monospace;
   color: var(--code);
 }
 

@@ -1,25 +1,25 @@
 @mixin font-face() {
-    @font-face {
-        font-family: 'Lora';
-        src: url('/fonts/lora-medium.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
-    @font-face {
-        font-family: 'Merriweather';
-        src: url('/fonts/merriweather-regular.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/inter-bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
 
-    @font-face {
-        font-family: 'Merriweather';
-        src: url('/fonts/merriweather-bold.woff2') format('woff2');
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-    }
+  @font-face {
+    font-family: 'CommitMono';
+    src: url('/fonts/commitmono-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 }
